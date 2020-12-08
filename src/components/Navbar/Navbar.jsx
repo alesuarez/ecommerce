@@ -11,13 +11,13 @@ const Navbar = () => {
             <AppBar position="fixed" className={classes.appBar} color="inherit">
                 <Toolbar>
                     <Typography varian="h6" className={classes.title} color="inherit">
-                        <img src={logo} alt="Commerce.js" height="25px" className={classes.image} />
-                        Commerce.js
+                        <img src={logo} alt="General 3D" height="25px" className={classes.image} />
+                        General 3D
                     </Typography>
                     <div className={classes.grow}/>
                     <div className={classes.button}>
                         <IconButton aria-label="Ver items del carrito" color="inherit">
-                            <Badge badgetContent={2} color="secondary">
+                            <Badge badgeContent={2} color="secondary">
                                 <ShoppingCart />
                             </Badge>
                         </IconButton>
