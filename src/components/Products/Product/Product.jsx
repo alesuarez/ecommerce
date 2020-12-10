@@ -2,9 +2,9 @@ import React from 'react'
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } from '@material-ui/core'
 import { AddShoppingCart } from '@material-ui/icons'
 
-import usesStyles from './style';
+import usesStyles from './styles';
 
-const Product = ({ product }) => {
+const Product = ({ product, onAddToCart }) => {
     const classes = usesStyles();
     return (
             <Card className={classes.root}>
@@ -21,7 +21,7 @@ const Product = ({ product }) => {
                     <Typography dangerouslySetInnerHTML={{__html: product.description}} variant="body2" color="textSecondary"/>
                 </CardContent>
                 <CardActions disableSpacing className={classes.cardActions}>
-                    <IconButton aria-label="Agregar al carrito">
+                    <IconButton aria-label="Agregar al carrito" onClick={() => onAddToCart(product.id, 1)}> {/* productId and quantity*/}
                         <AddShoppingCart/>
                     </IconButton>
                 </CardActions>
